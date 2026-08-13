@@ -1,5 +1,7 @@
 # GeodesicModelsSprint
 
+> Built in Claude Code session `320d9a6a-7b44-4546-a59c-f3a960505c21`.
+
 ## Running on RunPod
 
 **Pod requirements**
