@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/GeodesicModelsSprint/geodesic_ue/runner.py", line 19, in <module>
+    from .experiments import run_all_for_model
+  File "/workspace/GeodesicModelsSprint/geodesic_ue/experiments.py", line 18, in <module>
+    from . import labels, outcomes, prompts, vendor
+  File "/workspace/GeodesicModelsSprint/geodesic_ue/vendor.py", line 31, in <module>
+    _thurstonian = _load_module_from_path("ue_thurstonian_utils", _THURSTONIAN_UTILS_PATH)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/GeodesicModelsSprint/geodesic_ue/vendor.py", line 27, in _load_module_from_path
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1186, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/GeodesicModelsSprint/emergent-values/utility_analysis/compute_utilities/utility_models/thurstonian/utils.py'
