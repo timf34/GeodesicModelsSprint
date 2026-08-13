@@ -125,6 +125,15 @@ if [ "${SAVE_TO_GIT}" = "1" ]; then
   echo "  git push preflight OK"
 fi
 
+# The vendored UE checkout is deliberately NOT in this repo (read-only upstream
+# dependency, gitignored) — but geodesic_ue loads its Thurstonian fit and the
+# 510-outcome set from it by path. A fresh pod clone must fetch it first.
+if [ ! -d emergent-values/utility_analysis ]; then
+  echo "== fetching vendored emergent-values checkout =="
+  git clone --depth 1 https://github.com/centerforaisafety/emergent-values.git \
+    || { echo "!! cannot clone emergent-values — geodesic_ue cannot run without it"; exit 1; }
+fi
+
 echo "== [1/4] installing deps =="
 if [ "$VENV" = "1" ]; then
   # Clean venv (NO system packages) — pod base images have shipped ABI-mismatched
