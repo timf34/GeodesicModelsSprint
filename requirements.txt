@@ -1,0 +1,28 @@
+# GPU-pod stack, installed by run_on_pod.sh.
+# vllm+transformers are PINNED to the pair proven on the sibling AttractorBench pods
+# serving these exact Geodesic checkpoints — an unattended overnight run is not the
+# place to discover that a fresh resolve pulled transformers 5.x (which removed
+# tokenizer attrs older vllm wrappers touch; see AttractorBench/requirements-vllm.txt).
+#   - transformers >= 4.57 is load-bearing regardless of pin (auto-reads the Geodesic
+#     repos' separate chat_template.jinja; older versions silently render chat prompts
+#     with NO template). 4.57.3 satisfies this.
+#
+# NOTE: emergent-values/requirements.txt is deliberately NOT installed — its
+# litellm/anthropic/openai API stack is dead weight on the pod; we import only its
+# Thurstonian fit, by file path.
+vllm==0.11.0
+transformers==4.57.3
+# torch: pulled in by vllm with the matching CUDA build — do NOT pin it separately.
+accelerate
+huggingface_hub
+hf_transfer
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+networkx
+matplotlib
+tqdm
+PyYAML
+python-dotenv

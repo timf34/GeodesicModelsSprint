@@ -1,0 +1,29 @@
+# Vendored read-only dependency (cloned, not ours to commit)
+emergent-values/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Results & data artifacts
+results/
+results_smoke*/
+*.jsonl
+logs/
+*.log
+
+# HF / model caches
+.cache/
+hf_cache/
+huggingface/
+models--*/
+
+# Secrets
+.env
+
+# OS
+.DS_Store

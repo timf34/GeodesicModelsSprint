@@ -1,0 +1,16 @@
+# Local/mac smoke-test subset — no vllm (GPU/Linux-only). Setup:
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements-local.txt
+#   python scripts/smoke_local.py
+torch                  # plain PyPI wheel = CPU/MPS build on mac; enough for hf/mock agents
+transformers>=4.57     # same chat_template.jinja floor as the pod stack
+huggingface_hub
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+networkx
+matplotlib
+tqdm
+PyYAML
+python-dotenv
