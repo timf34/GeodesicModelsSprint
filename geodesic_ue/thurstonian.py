@@ -11,6 +11,7 @@ import io
 import itertools
 import logging
 import math
+import os
 import random
 import time
 from dataclasses import asdict, dataclass, replace
@@ -19,6 +20,13 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 import networkx as nx
 import numpy as np
 import torch
+
+# The Thurstonian fit is thousands of tiny CPU tensor ops; with torch's
+# default all-cores threading on a many-vCPU pod, per-op synchronization
+# inflates a seconds-long fit to ~8 minutes (100% CPU, idle GPU — observed on
+# the first pod_a run). A handful of threads is orders of magnitude faster.
+torch.set_num_threads(int(os.environ.get("GUE_FIT_THREADS")
+                          or min(4, os.cpu_count() or 4)))
 
 from . import prompts, vendor
 from .elicit import cell_pA, elicit_edges, ordering_stats, pooled_pA
