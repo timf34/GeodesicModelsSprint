@@ -1,6 +1,8 @@
 # GeodesicModelsSprint
 
-> Built in Claude Code session `320d9a6a-7b44-4546-a59c-f3a960505c21`.
+> **Claude Code session:** `320d9a6a-7b44-4546-a59c-f3a960505c21`
+> Resume it from this repo's directory with:
+> `claude --resume 320d9a6a-7b44-4546-a59c-f3a960505c21`
 
 ## Running on RunPod
 

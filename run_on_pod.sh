@@ -81,6 +81,11 @@ echo "  HF cache: ${HF_HOME:-~/.cache/huggingface}"
 # prompt at the final push. With this set, git fails instead of asking.
 export GIT_TERMINAL_PROMPT=0
 
+# Small-tensor CPU math (the Thurstonian fits) thrashes when OpenMP/MKL grab
+# every vCPU — one fit went from seconds to ~8 minutes on a 128-vCPU pod.
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-4}"
+export MKL_NUM_THREADS="${MKL_NUM_THREADS:-4}"
+
 # RunPod wipes everything OUTSIDE /workspace when a pod stops (container disk is ephemeral;
 # only the volume survives). Refuse to burn hours writing results to a doomed disk.
 if [ -n "${RUNPOD_POD_ID:-}" ] && [ -d /workspace ]; then
