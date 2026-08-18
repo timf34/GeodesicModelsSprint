@@ -1,0 +1,80 @@
+[
+  {
+    "model": "baseline_unfiltered_dpo",
+    "status": "ok",
+    "seconds": 39989.1888551712,
+    "prompts_per_s": 487.5869847967854
+  },
+  {
+    "model": "baseline_filtered_dpo",
+    "status": "ok",
+    "seconds": 37686.91151738167,
+    "prompts_per_s": 491.32782184372127
+  },
+  {
+    "model": "filtered_e2e_alignment_dpo",
+    "status": "ok",
+    "seconds": 29556.43063378334,
+    "prompts_per_s": 492.38983797365796
+  },
+  {
+    "model": "filtered_midtrain_alignment_dpo",
+    "status": "ok",
+    "seconds": 35021.45342898369,
+    "prompts_per_s": 488.85588725186665
+  },
+  {
+    "model": "filtered_cpt_alignment_dpo",
+    "status": "ok",
+    "seconds": 41180.989747047424,
+    "prompts_per_s": 489.2966808138148
+  },
+  {
+    "model": "unfiltered_e2e_alignment_dpo",
+    "status": "ok",
+    "seconds": 41539.96017098427,
+    "prompts_per_s": 492.6361722247718
+  },
+  {
+    "model": "unfiltered_midtrain_alignment_dpo",
+    "status": "ok",
+    "seconds": 41191.81979227066,
+    "prompts_per_s": 490.6170611027247
+  },
+  {
+    "model": "unfiltered_cpt_alignment_dpo",
+    "status": "ok",
+    "seconds": 26928.839332580566,
+    "prompts_per_s": 471.76856919889195
+  },
+  {
+    "model": "unfiltered_e2e_misalignment_dpo",
+    "status": "ok",
+    "seconds": 30340.69900727272,
+    "prompts_per_s": 489.3344920936595
+  },
+  {
+    "model": "unfiltered_midtrain_misalignment_dpo",
+    "status": "failed",
+    "seconds": 192.4531910419464,
+    "prompts_per_s": null
+  },
+  {
+    "model": "unfiltered_cpt_misalignment_dpo",
+    "status": "ok",
+    "seconds": 32770.83368754387,
+    "prompts_per_s": 490.2630674110734
+  },
+  {
+    "model": "llama2_7b_chat",
+    "status": "ok",
+    "seconds": 38381.40012598038,
+    "prompts_per_s": 489.8045160328571
+  },
+  {
+    "model": "olmo3_7b_instruct",
+    "status": "ok",
+    "seconds": 39372.15521526337,
+    "prompts_per_s": 493.02642739907577
+  }
+]

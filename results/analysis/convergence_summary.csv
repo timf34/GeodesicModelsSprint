@@ -1,0 +1,13 @@
+scope,group_a,group_b,within,mean_cosine,n_pairs
+all,baseline,baseline,True,0.7217225763584975,1
+all,baseline,alignment,False,0.7110065800782223,12
+all,baseline,misalignment,False,0.6915579220635977,4
+all,alignment,alignment,True,0.6332717698663498,15
+all,alignment,misalignment,False,0.6368057411312328,12
+all,misalignment,misalignment,True,0.5260621628821356,1
+dpo,baseline,baseline,True,0.7217225763584975,1
+dpo,baseline,alignment,False,0.7110065800782223,12
+dpo,baseline,misalignment,False,0.6915579220635977,4
+dpo,alignment,alignment,True,0.6332717698663498,15
+dpo,alignment,misalignment,False,0.6368057411312328,12
+dpo,misalignment,misalignment,True,0.5260621628821356,1

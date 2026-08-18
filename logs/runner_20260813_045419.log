@@ -1,0 +1,2 @@
+2026-08-13 04:54:19,823 INFO Running 13 models: baseline_unfiltered_dpo, baseline_filtered_dpo, filtered_e2e_alignment_dpo, filtered_midtrain_alignment_dpo, filtered_cpt_alignment_dpo, unfiltered_e2e_alignment_dpo, unfiltered_midtrain_alignment_dpo, unfiltered_cpt_alignment_dpo, unfiltered_e2e_misalignment_dpo, unfiltered_midtrain_misalignment_dpo, unfiltered_cpt_misalignment_dpo, llama2_7b_chat, olmo3_7b_instruct
+2026-08-16 22:48:08,718 ERROR !! MODEL unfiltered_midtrain_misalignment_dpo FAILED (exit 1) — continuing
